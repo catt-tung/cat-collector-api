@@ -13,7 +13,6 @@ def index():
   users = User.query.all()
   return jsonify([user.serialize() for user in users]), 200
 
-
 # http://127.0.0.1:5000/api/auth/register
 @auth.route('/register', methods=["POST"])
 def register():
